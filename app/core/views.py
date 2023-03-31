@@ -6,10 +6,12 @@ from .serializers import ShortURLSerializer
 
 
 class ShortenURLView(generics.CreateAPIView):
+    """Manage the short url in the database"""
     serializer_class = ShortURLSerializer
 
 
 class RedirectURLView(generics.RetrieveAPIView):
+    """Retrieve the short url"""
     queryset = ShortURL.objects.all()
     lookup_field = 'short_code'
 
