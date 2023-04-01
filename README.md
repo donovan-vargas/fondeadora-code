@@ -3,9 +3,14 @@
 # Shorted url API
 
 ## Deployed version
-<a href="http://ec2-44-203-40-74.compute-1.amazonaws.com/sorted_code">"http://ec2-44-203-40-74.compute-1.amazonaws.com/sorted_code</a>
+<a href="http://ec2-44-203-40-74.compute-1.amazonaws.com/sorted_code">http://ec2-44-203-40-74.compute-1.amazonaws.com/sorted_code</a>
+### Exmaple:
+- original url=https://www.google.com/
+- shorted_code=Ug5V68
+- <a href="http://ec2-44-203-40-74.compute-1.amazonaws.com/Ug5V68">http://ec2-44-203-40-74.compute-1.amazonaws.com/Ug5V68</a>
 
-## Live documentation
+
+## Live documentation You can use directly here!!!
 <a href="http://ec2-44-203-40-74.compute-1.amazonaws.com/api/docs">Swagger Docs</a>
 
 A URL Shortener is a service that creates short aliases for URLs. It generates a shortcode for a URL and
