@@ -1,6 +1,8 @@
 
 from rest_framework.response import Response
 from rest_framework import generics
+from django.shortcuts import redirect
+from django.http import Http404
 from .models import ShortURL
 from .serializers import ShortURLSerializer
 
@@ -18,3 +20,12 @@ class RedirectURLView(generics.RetrieveAPIView):
     def retrieve(self, request, *args, **kwargs):
         short_url = self.get_object()
         return Response({'original_url': short_url.original_url})
+
+
+def redirect_to_url(request, short_code):
+    """HTML page to redirect automatically """
+    try:
+        short_url = ShortURL.objects.get(short_code=short_code)
+        return redirect(short_url.original_url)
+    except ShortURL.DoesNotExist:
+        raise Http404('Short code does not exist')
