@@ -34,6 +34,12 @@ https://bitly.com/.
 - django
 - djangorestframework
 
+### Test, Lint
+- ApiTest
+- flake8
+- github-actions
+<a href="https://github.com/donovan-vargas/fondeadora-code/actions">actions</a>
+
 ### How to run locally
 
 Clone the repository:
