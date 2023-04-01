@@ -73,6 +73,7 @@ GET /api/v1/short/{short_code}
 /<short_code>
 ```
 In this url you will be able to put your short_code and you will be redirected
+
 --- 
 
 ## How it works:
