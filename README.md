@@ -3,7 +3,7 @@
 # Shorted url API
 
 ## Deployed version
-<a href="http://ec2-44-203-40-74.compute-1.amazonaws.com/">Shorted</a>
+<a href="http://ec2-44-203-40-74.compute-1.amazonaws.com/">http://ec2-44-203-40-74.compute-1.amazonaws.com/<sorted_code></a>
 
 ## Live documentation
 <a href="http://ec2-44-203-40-74.compute-1.amazonaws.com/api/docs">Swagger Docs</a>
