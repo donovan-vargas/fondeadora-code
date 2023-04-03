@@ -50,3 +50,15 @@ class ShortURLApiTest(TestCase):
         payload = {'original_url': 'invalid-url'}
         res = self.client.post(SHORTED_URL, payload)
         self.assertEqual(res.status_code, status.HTTP_400_BAD_REQUEST)
+
+    def test_redirect_existing_shortcode(self):
+        self.short_url = ShortURL.objects.create(
+            original_url=self.url_to_short, short_code='abc123')
+        res = self.client.get('/abc123')
+        self.assertEqual(res.status_code, status.HTTP_302_FOUND)
+        self.assertRedirects(
+            res, self.url_to_short, fetch_redirect_response=False)
+
+    def test_redirect_non_existing_shortcode(self):
+        res = self.client.get('/does_not_exist')
+        self.assertEqual(res.status_code, status.HTTP_404_NOT_FOUND)
